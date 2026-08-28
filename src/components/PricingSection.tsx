@@ -86,7 +86,7 @@ export default function PricingSection({ onOpenEstimate }: PricingSectionProps) 
         </div>
 
         {/* CTA Banner */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 border border-slate-700 text-white rounded-3xl p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-slate-700 text-white rounded-3xl p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl relative overflow-hidden">
           <div className="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-[#F66504]/10 to-transparent pointer-events-none" />
           
           <div className="max-w-2xl relative">

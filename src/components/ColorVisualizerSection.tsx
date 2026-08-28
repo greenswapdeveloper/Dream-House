@@ -52,7 +52,7 @@ export default function ColorVisualizerSection({ onOpenEstimate }: ColorVisualiz
                 className={`p-4 rounded-2xl border text-left transition-all duration-300 flex flex-col justify-between ${
                   isSelected
                     ? 'bg-slate-800 border-[#F66504] shadow-xl shadow-[#F66504]/20 scale-[1.02]'
-                    : 'bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:bg-slate-850'
+                    : 'bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:bg-slate-800'
                 }`}
               >
                 <div>

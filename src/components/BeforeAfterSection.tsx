@@ -1,8 +1,12 @@
 import { useState, useRef, ChangeEvent } from 'react';
-import { Columns, SlidersHorizontal, Info, Sparkles, CheckCircle2, AlertTriangle, ZoomIn } from 'lucide-react';
+import { Columns, SlidersHorizontal, Info, Sparkles, CheckCircle2, AlertTriangle, ZoomIn, ArrowRight } from 'lucide-react';
 import { beforeImg, afterImg } from '../data/servicesData';
 
-export default function BeforeAfterSection() {
+interface BeforeAfterSectionProps {
+  onOpenEstimate?: () => void;
+}
+
+export default function BeforeAfterSection({ onOpenEstimate }: BeforeAfterSectionProps = {}) {
   const [sliderPosition, setSliderPosition] = useState<number>(50);
   const [viewMode, setViewMode] = useState<'slider' | 'sideBySide'>('slider');
   const containerRef = useRef<HTMLDivElement>(null);
