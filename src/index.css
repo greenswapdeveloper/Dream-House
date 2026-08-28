@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #F66504;
+    --color-secondary: #03FC4E;
+    --color-accent: #09DAF6;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+  }
+}
+
+.text-primary-brand {
+  color: #F66504;
+}
+
+.bg-primary-brand {
+  background-color: #F66504;
+}
+
+.border-primary-brand {
+  border-color: #F66504;
+}
+
+.bg-secondary-brand {
+  background-color: #03FC4E;
+}
+
+.text-secondary-brand {
+  color: #03FC4E;
+}
+
+.border-secondary-brand {
+  border-color: #03FC4E;
+}
+
+.text-accent-brand {
+  color: #09DAF6;
+}
+
+.bg-accent-brand {
+  background-color: #09DAF6;
+}
+
+.border-accent-brand {
+  border-color: #09DAF6;
+}
