@@ -2,9 +2,12 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TrustStrip from './components/TrustStrip';
+import ContractorSpotlight from './components/ContractorSpotlight';
 import ServicesSection from './components/ServicesSection';
-import SpecialistNeedsSection from './components/SpecialistNeedsSection';
+import WorkGallerySection from './components/WorkGallerySection';
 import BeforeAfterSection from './components/BeforeAfterSection';
+import ColorVisualizerSection from './components/ColorVisualizerSection';
+import SpecialistNeedsSection from './components/SpecialistNeedsSection';
 import ProcessSection from './components/ProcessSection';
 import PricingSection from './components/PricingSection';
 import EstimateRequestFlow from './components/EstimateRequestFlow';
@@ -12,6 +15,7 @@ import ServiceAreaSection from './components/ServiceAreaSection';
 import FaqSection from './components/FaqSection';
 import FinalCta from './components/FinalCta';
 import Footer from './components/Footer';
+import QuickContactFloating from './components/QuickContactFloating';
 
 export default function App() {
   const [selectedService, setSelectedService] = useState<string>('Interior Wall Painting');
@@ -27,49 +31,59 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col selection:bg-[#F66504] selection:text-white">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-[#F66504] selection:text-white antialiased">
       {/* 1. Header */}
       <Header onOpenEstimate={() => scrollToEstimate()} />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         {/* 2. Hero */}
         <Hero onOpenEstimate={() => scrollToEstimate()} />
 
         {/* 3. Compact Trust/Value Strip */}
         <TrustStrip />
 
-        {/* 4. Services */}
+        {/* 4. Contractor Spotlight: Suraj Kumar Sah */}
+        <ContractorSpotlight onOpenEstimate={() => scrollToEstimate()} />
+
+        {/* 5. Services */}
         <ServicesSection onSelectService={(svc) => scrollToEstimate(svc)} />
 
-        {/* 5. Specialist / Painting Project Needs */}
+        {/* 6. Work Gallery & Completed Projects */}
+        <WorkGallerySection onOpenEstimate={() => scrollToEstimate()} />
+
+        {/* 7. Interactive Before-and-After Comparison */}
+        <BeforeAfterSection onOpenEstimate={() => scrollToEstimate()} />
+
+        {/* 8. Color Harmonies & Palettes */}
+        <ColorVisualizerSection onOpenEstimate={() => scrollToEstimate()} />
+
+        {/* 9. Specialist / Painting Project Needs */}
         <SpecialistNeedsSection />
 
-        {/* 6. Before-and-After Comparison */}
-        <BeforeAfterSection />
-
-        {/* 7. Project / Painting Process */}
+        {/* 10. Project / Painting Process */}
         <ProcessSection />
 
-        {/* 8. Pricing */}
+        {/* 11. Pricing */}
         <PricingSection onOpenEstimate={() => scrollToEstimate()} />
 
-        {/* 9. (Business/About section omitted as no about media exists) */}
-
-        {/* 10. Guided Painting Estimate Request */}
+        {/* 12. Guided Painting Estimate Request */}
         <EstimateRequestFlow initialService={selectedService} />
 
-        {/* 11. Service Area */}
+        {/* 13. Service Area */}
         <ServiceAreaSection />
 
-        {/* 12. FAQ */}
+        {/* 14. FAQ */}
         <FaqSection />
 
-        {/* 13. Final CTA */}
+        {/* 15. Final CTA */}
         <FinalCta onOpenEstimate={() => scrollToEstimate()} />
       </main>
 
-      {/* 14. Footer */}
+      {/* 16. Footer */}
       <Footer />
+
+      {/* 17. Floating 1-Click WhatsApp and Call Action Dock */}
+      <QuickContactFloating />
     </div>
   );
 }
